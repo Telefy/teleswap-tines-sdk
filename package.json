@@ -1,0 +1,34 @@
+{
+  "name": "@telefy/teleswap-tines-sdk",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "module": "dist/tines.esm.js",
+  "repository": "https://github.com/Telefy/teleswap-tines-sdk.git",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "lint": "tsdx lint src test",
+    "build": "tsdx build",
+    "watch": "tsdx watch",
+    "test": "tsdx test",
+    "test_debug": "node --inspect-brk '../../node_modules/tsdx/dist/index.js' test",
+    "clear_jest_cache": "tsdx test --clearCache --passWithNoTests",
+    "prepublishOnly": "npx tsdx build"
+  },
+  "dependencies": {
+    "@ethersproject/bignumber": "^5.4.0",
+    "@telefy/teleswap-core-sdk": "^1.0.6"
+  },
+  "devDependencies": {
+    "@types/seedrandom": "^3.0.1",
+    "seedrandom": "^3.0.5",
+    "tsdx": "^0.14.1"
+  }
+}
